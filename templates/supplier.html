@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+
+{% block title %}Suppliers{% endblock %}
+
+{% block content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr>
+      <th scope="row">{{user.id}}</th>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.address}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6"> <form class="mt-5" action="/suppliers" method="post"> <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Supplier's Name</label>
+          <input type="text" name="sname" class="form-control" id="inputName" placeholder="Enter Suppler's Name">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Email</label>
+          <input type="email" name="semail" class="form-control" id="exampleInputEmail1" placeholder="name@example.com">
+        </div>
+        <div class="input-group mb-3">
+  <span class="input-group-text">Phone Number</span>
+  <input type="text" name="sphone" class="form-control" aria-label="Phone Number">
+</div>
+<div class="col-md-6"> <form class="mt-5"> <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Supplier's Address </label>
+          <input type="text" name="saddress" class="form-control" id="inputName" placeholder="Enter Suppler's Address">
+        </div>
+        <div class="text-center"> 
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
