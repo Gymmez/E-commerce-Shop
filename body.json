@@ -1,0 +1,6 @@
+{
+  "ordercustomerID": 1000,
+  "orderitems": [
+    { "name": "pepsi", "price": 30 },{"name":"chips","price":15}
+  ]
+}

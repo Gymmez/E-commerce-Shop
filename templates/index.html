@@ -12,7 +12,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url_for('home') }}">
                 <img src="{{url_for('static',filename='/images/bag-fill.svg')}}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                {% block title %}Ecommerce Shop {% endblock %}
+                {% block title %}Ecommerce Shop Management{% endblock %}
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -27,11 +27,12 @@
                         <a class="nav-link" href="{{ url_for('customer') }}">Customers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('product') }}">Products</a>
+                        <a class="nav-link" href="{{ url_for('orders') }}">Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('supplier') }}">Suppliers</a>
-                    </li>        
+                        <a class="nav-link" href="{{ url_for('payments') }}">Payments</a>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -52,22 +53,22 @@
      <div class="card" style="width: 18rem;">
   <img src="{{url_for('static',filename='/images/product.jpg')}}"class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Products</h5>
-    <p class="card-text">View Products in the Database. Add new Products</p>
-    <a href="{{ url_for('product') }}" class="btn btn-primary">Go</a>
+    <h5 class="card-title">Orders</h5>
+    <p class="card-text">View orders in the Database. Add new Orders</p>
+    <a href="{{ url_for('orders') }}" class="btn btn-primary">Go</a>
   </div>
 </div>
     <div class="card" style="width: 18rem;">
-  <img src="{{url_for('static',filename='/images/supplier.jpg')}}"class="card-img-top" alt="...">
+  <img src="{{url_for('static',filename='/images/download.png')}}"class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Suppliers</h5>
-    <p class="card-text">View Suppliers in the Database</p>
-    <a href="{{ url_for('supplier') }}" class="btn btn-primary">Go</a>
+    <h5 class="card-title">Payments</h5>
+    <p class="card-text">View Payments in the Database</p>
+    <a href="{{ url_for('payments') }}" class="btn btn-primary">Go</a>
   </div>
 </div>
   </div>
 </div>
-
+       
         {% endblock %}
     
     <div class="container">
